@@ -71,7 +71,7 @@ window.WEEKS = [
     slack: null,
     cards: [
       { name: "One structure for the T&G files of all 6 brands", cat: "tg", type: "Improvement", h: 32.9 },
-      { name: "Questline UR boards: minigame column, reward row (no card yet)", cat: "plugins", type: "Feature", h: 7.7 },
+      { name: "Questline UR boards: minigame column, reward row", cat: "plugins", type: "Feature", h: 7.7 },
       { name: "RW Style Guide + DS file map for Mariusz", cat: "ds", type: "Improvement", h: 3.4 },
       { name: "Chain Offer: Snake fixes with Luiza", cat: "plugins", type: "Bug", h: 1.8 },
       { name: "Plugin ownership: Noel, Carl, Tristan", cat: "plugins", type: "Other", h: 1.5 },
