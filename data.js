@@ -16,7 +16,7 @@ window.WEEKS = [
   {
     id: "2026-10-09",
     label: "2-9 Oct",
-    period: "Fri 2 Oct 16:15 - Fri 9 Oct 11:10",
+    period: "2-9 Oct",
     sprint: "Sprint 1 · 28 Sep - 9 Oct",
     meeting: "Sprint planning (1 h)",
     total: 47,
@@ -33,8 +33,7 @@ window.WEEKS = [
       { name: "Skills (HighRoyale starter pack)", cat: "wow", type: "Other", h: 1.0 },
       { name: "Puzzle with Luiza", cat: "plugins", type: "New product", h: 0.8 },
       { name: "Board upkeep + Digital Design Pulse", cat: "wow", type: "Other", h: 1.3 }
-    ],
-    days: [["Fri 2 - Sun 4", 9.7], ["Mon 5", 8.1], ["Tue 6", 6.3], ["Wed 7", 11.8], ["Thu 8", 10.5], ["Fri 9 (to 11:10)", 1.9]],
+    ], ["Mon 5", 8.1], ["Tue 6", 6.3], ["Wed 7", 11.8], ["Thu 8", 10.5], ["Fri 9 (to 11:10)", 1.9]],
     sprintPlan: {
       capacity: 60, spent: 93,
       split: [["Planned", 33, "#5b8def"], ["Added mid-sprint", 46, "#e8a33d"], ["Urgent fix", 14, "#d9534f"]],
@@ -65,7 +64,7 @@ window.WEEKS = [
   {
     id: "2026-10-16",
     label: "9-16 Oct",
-    period: "Fri 9 Oct 11:10 - Fri 16 Oct 11:30",
+    period: "9-16 Oct",
     sprint: "Sprint 2 · 12-23 Oct, week 1",
     meeting: "AI Systems overview (30 min)",
     total: 55,
@@ -84,8 +83,7 @@ window.WEEKS = [
       { name: "Team meetings (1:1, Pulse, Product bi-weekly)", cat: "wow", type: "Other", h: 2.0 },
       { name: "Board upkeep, planning, 15Five", cat: "wow", type: "Other", h: 1.6 },
       { name: "Not on a card (workshop reviews, skills sync)", cat: "other", type: "Other", h: 1.5 }
-    ],
-    days: [["Fri 9 (from 11:10)", 5.5], ["Sat 10 - Mon 12", 16.2], ["Tue 13", 6.9], ["Wed 14", 7.7], ["Thu 15", 14.1], ["Fri 16 (to 11:30)", 4.7]],
+    ], ["Sat 10 - Mon 12", 16.2], ["Tue 13", 6.9], ["Wed 14", 7.7], ["Thu 15", 14.1], ["Fri 16 (to 11:30)", 4.7]],
     sprintPlan: {
       capacity: 60, spent: null,
       split: [],

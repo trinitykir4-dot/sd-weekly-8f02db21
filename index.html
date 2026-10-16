@@ -55,7 +55,7 @@ function week(i){
   const typ=byKey(w,'type');
   let h=`<div class="sub">${esc(w.period)} · ${esc(w.sprint)} · call: ${esc(w.meeting)}</div>
   <div class="kpis">
-   <div class="k"><b>${w.total} h${delta(w.total,p&&p.total)}</b><span>tracked this week · target 40 h</span></div>
+   <div class="k"><b>${w.total} h${delta(w.total,p&&p.total)}</b><span>at least, in working sessions · contract 40 h</span></div>
    <div class="k"><b>${Math.round(top[1]/w.total*100)}%</b><span>on ${esc(C[top[0]].name)}</span></div>
    <div class="k"><b>${w.cards.filter(c=>c.h>0).length}</b><span>cards worked on</span></div>
    ${w.sprintPlan.spent?`<div class="k"><b>${w.sprintPlan.spent} h</b><span>on sprint cards · capacity ${w.sprintPlan.capacity} h</span></div>`:''}
@@ -66,8 +66,7 @@ function week(i){
   <h2>Hours by card</h2>
   <div class="leg" id="flt">${Object.keys(C).filter(k=>cat[k]).map(k=>`<button data-k="${k}"><i style="background:${C[k].color}"></i>${esc(C[k].name)}</button>`).join('')}</div>
   <div id="cardbars"></div>
-  <div class="grid2"><div><h2>By request type</h2>${bars(Object.entries(typ).sort((a,b)=>b[1]-a[1]).map(([n,v])=>[n,v,T[n]||'#888']))}</div>
-  <div><h2>By day</h2>${bars(w.days.map(([n,v])=>[n,v,'#8a8a95']))}</div></div>
+  <h2>By request type</h2>${bars(Object.entries(typ).sort((a,b)=>b[1]-a[1]).map(([n,v])=>[n,v,T[n]||'#888']))}
   <h2>${esc(w.sprint)} · plan vs fact</h2>
   ${w.sprintPlan.split.length?stack(w.sprintPlan.split):''}
   <table><tr><th>Card</th><th>${w.sprintPlan.split.length?'Estimate':'Priority'}</th><th>Spent</th><th>Status</th></tr>
