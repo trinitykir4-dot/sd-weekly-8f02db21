@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Kir · AI Systems Design · weekly</title>
+<style>
+:root{--bg:#0d0d0f;--card:#18181c;--line:#2a2a30;--mute:#9a9aa5;--txt:#eee}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Inter,"Segoe UI",sans-serif;background:var(--bg);color:var(--txt);margin:0}
+.wrap{max-width:1100px;margin:auto;padding:32px 24px 64px}
+h1{font-size:26px;margin:0}h2{font-size:17px;margin:32px 0 10px}.sub{color:var(--mute);font-size:13px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 8px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:2}
+.tab{background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:999px;padding:7px 16px;cursor:pointer;font:inherit;font-size:14px}
+.tab.on{background:#fff;color:#000;border-color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:16px}
+.k{background:var(--card);border-radius:12px;padding:16px}.k b{font-size:30px;display:block;line-height:1.2}.k span{color:var(--mute);font-size:13px}
+.d{font-size:13px;margin-left:6px}.up{color:#e8a33d}.dn{color:#3dbb7a}
+.stack{display:flex;height:36px;border-radius:8px;overflow:hidden;margin:8px 0}
+.stack div{display:flex;align-items:center;justify-content:center;font-size:12px;color:#000;font-weight:600;white-space:nowrap;overflow:hidden;cursor:default}
+.leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:#ccc}.leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px}
+.leg button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:2px 0}.leg button.off{opacity:.35}
+.row{display:grid;grid-template-columns:minmax(160px,340px) 1fr 56px;gap:10px;align-items:center;margin:5px 0;font-size:14px}
+.bar{height:16px;border-radius:4px;min-width:2px;transition:width .3s}.v{text-align:right;color:#ccc;font-variant-numeric:tabular-nums}
+.card{background:var(--card);border-radius:12px;padding:14px 20px;margin:8px 0}ul{margin:4px 0;padding-left:20px}li{margin:4px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--mute);font-weight:500}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:800px){.grid2{grid-template-columns:1fr}}
+.cols{display:flex;align-items:flex-end;gap:18px;height:240px;border-bottom:1px solid var(--line);padding:0 8px;margin-top:12px;position:relative}
+.col{flex:1;display:flex;flex-direction:column-reverse;cursor:pointer;max-width:120px}.col div{transition:height .3s}
+.cap{position:absolute;left:0;right:0;border-top:1px dashed #d9534f;font-size:11px;color:#d9534f;text-align:right}
+.xl{display:flex;gap:18px;padding:6px 8px 0}.xl div{flex:1;text-align:center;font-size:12px;color:var(--mute);max-width:120px}
+select{background:var(--card);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit}
+</style></head>
+<body><div class="wrap">
+<h1>AI Systems Design · Kir Artemov</h1>
+<div class="sub">Weekly hours for the Friday call with Noel. Sources: Claude working sessions, Slack, calendar. Manual Figma work is not visible, so every number is a lower bound. Board: <a style="color:#9ab" href="https://b2spin.monday.com/boards/18429306474">AI Systems Design on monday</a></div>
+<div class="tabs" id="tabs"></div>
+<div id="view"></div>
+</div>
+<script src="data.js"></script>
+<script>
+const C=window.CATEGORIES,T=window.TYPES,W=window.WEEKS;
+const $=s=>document.querySelector(s), esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const r1=n=>Math.round(n*10)/10;
+function byKey(w,key){const m={};w.cards.forEach(c=>m[c[key]]=(m[c[key]]||0)+c.h);return m}
+function bars(list,colorOf){const max=Math.max(...list.map(x=>x[1]),1);
+  return list.map(([n,h,col])=>`<div class="row"><div>${esc(n)}</div><div><div class="bar" style="width:${h/max*100}%;background:${col||colorOf}"></div></div><div class="v">${r1(h)}</div></div>`).join('')}
+function stack(parts){const t=parts.reduce((a,p)=>a+p[1],0)||1;
+  return `<div class="stack">${parts.filter(p=>p[1]>0).map(([n,h,col])=>`<div title="${esc(n)}: ${r1(h)} h" style="width:${h/t*100}%;background:${col}">${h/t>.12?esc(n)+' '+Math.round(h)+' h':''}</div>`).join('')}</div>`}
+function delta(now,prev){if(prev==null||now==null)return'';const d=r1(now-prev);if(!d)return'';return `<span class="d ${d>0?'up':'dn'}">${d>0?'+':''}${d}</span>`}
+
+function week(i){
+  const w=W[i],p=W[i-1],cat=byKey(w,'cat'),pc=p?byKey(p,'cat'):{};
+  const catParts=Object.keys(C).filter(k=>cat[k]).map(k=>[C[k].name,cat[k],C[k].color]);
+  const top=Object.entries(cat).sort((a,b)=>b[1]-a[1])[0];
+  const typ=byKey(w,'type');
+  let h=`<div class="sub">${esc(w.period)} · ${esc(w.sprint)} · call: ${esc(w.meeting)}</div>
+  <div class="kpis">
+   <div class="k"><b>${w.total} h${delta(w.total,p&&p.total)}</b><span>tracked this week · target 40 h</span></div>
+   <div class="k"><b>${Math.round(top[1]/w.total*100)}%</b><span>on ${esc(C[top[0]].name)}</span></div>
+   <div class="k"><b>${w.cards.filter(c=>c.h>0).length}</b><span>cards worked on</span></div>
+   ${w.sprintPlan.spent?`<div class="k"><b>${w.sprintPlan.spent} h</b><span>on sprint cards · capacity ${w.sprintPlan.capacity} h</span></div>`:''}
+   ${w.slack?`<div class="k"><b>${w.slack}</b><span>Slack messages sent</span></div>`:''}
+  </div>
+  <h2>Where the week went · ${w.total} h</h2>${stack(catParts)}
+  <div class="leg">${catParts.map(([n,h,col])=>`<span><i style="background:${col}"></i>${esc(n)} ${r1(h)} h${delta(h,pc[Object.keys(C).find(k=>C[k].name===n)]||0)}</span>`).join('')}</div>
+  <h2>Hours by card</h2>
+  <div class="leg" id="flt">${Object.keys(C).filter(k=>cat[k]).map(k=>`<button data-k="${k}"><i style="background:${C[k].color}"></i>${esc(C[k].name)}</button>`).join('')}</div>
+  <div id="cardbars"></div>
+  <div class="grid2"><div><h2>By request type</h2>${bars(Object.entries(typ).sort((a,b)=>b[1]-a[1]).map(([n,v])=>[n,v,T[n]||'#888']))}</div>
+  <div><h2>By day</h2>${bars(w.days.map(([n,v])=>[n,v,'#8a8a95']))}</div></div>
+  <h2>${esc(w.sprint)} · plan vs fact</h2>
+  ${w.sprintPlan.split.length?stack(w.sprintPlan.split):''}
+  <table><tr><th>Card</th><th>${w.sprintPlan.split.length?'Estimate':'Priority'}</th><th>Spent</th><th>Status</th></tr>
+  ${w.sprintPlan.rows.map(r=>`<tr>${r.map(x=>`<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</table>
+  <h2>Done and shipped</h2><div class="card"><ul>${w.done.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+  <h2>Takeaways</h2><div class="card"><ul>${w.takeaways.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+  ${w.topics.length?`<h2>To discuss</h2><div class="card"><ul>${w.topics.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}`;
+  $('#view').innerHTML=h;
+  const off=new Set();
+  const draw=()=>{const list=w.cards.filter(c=>!off.has(c.cat)).sort((a,b)=>b.h-a.h).map(c=>[c.name,c.h,C[c.cat].color]);$('#cardbars').innerHTML=bars(list)};
+  document.querySelectorAll('#flt button').forEach(b=>b.onclick=()=>{const k=b.dataset.k;off.has(k)?off.delete(k):off.add(k);b.classList.toggle('off');draw()});
+  draw();
+}
+
+function compare(){
+  const max=Math.max(...W.map(w=>w.total),60);
+  const opts=W.map((w,i)=>`<option value="${i}">${esc(w.label)}</option>`).join('');
+  $('#view').innerHTML=`<div class="sub">All weeks side by side. Click a column to open that week. Dashed line = 40 h week.</div>
+  <h2>Hours per week by area</h2>
+  <div class="cols" id="cols"><div class="cap" style="bottom:${40/max*100}%">40 h</div></div><div class="xl" id="xl"></div>
+  <div class="leg" style="margin-top:12px">${Object.keys(C).map(k=>`<span><i style="background:${C[k].color}"></i>${esc(C[k].name)}</span>`).join('')}</div>
+  <h2>Compare 2 weeks</h2>
+  <div><select id="a">${opts}</select> vs <select id="b">${opts}</select></div>
+  <div id="cmp" style="margin-top:12px"></div>`;
+  $('#cols').insertAdjacentHTML('beforeend',W.map((w,i)=>{const c=byKey(w,'cat');
+    return `<div class="col" data-i="${i}" title="${esc(w.label)}: ${w.total} h">${Object.keys(C).filter(k=>c[k]).map(k=>`<div title="${esc(C[k].name)}: ${r1(c[k])} h" style="height:${c[k]/max*240}px;background:${C[k].color}"></div>`).join('')}</div>`}).join(''));
+  $('#xl').innerHTML=W.map(w=>`<div>${esc(w.label)}<br><b style="color:#fff">${w.total} h</b></div>`).join('');
+  document.querySelectorAll('.col').forEach(c=>c.onclick=()=>go(+c.dataset.i));
+  const A=$('#a'),B=$('#b');A.value=Math.max(0,W.length-2);B.value=W.length-1;
+  const cmp=()=>{const a=W[A.value],b=W[B.value],ca=byKey(a,'cat'),cb=byKey(b,'cat');
+    $('#cmp').innerHTML=`<table><tr><th>Area</th><th>${esc(a.label)}</th><th>${esc(b.label)}</th><th>Change</th></tr>
+    ${Object.keys(C).filter(k=>ca[k]||cb[k]).map(k=>`<tr><td><i style="display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;background:${C[k].color}"></i>${esc(C[k].name)}</td><td>${r1(ca[k]||0)} h</td><td>${r1(cb[k]||0)} h</td><td>${delta(cb[k]||0,ca[k]||0)||'0'}</td></tr>`).join('')}
+    <tr><td><b>Total</b></td><td><b>${a.total} h</b></td><td><b>${b.total} h</b></td><td>${delta(b.total,a.total)||'0'}</td></tr></table>`};
+  A.onchange=B.onchange=cmp;cmp();
+}
+
+function go(i){document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.i==String(i)));
+  location.hash=i==='all'?'all':W[i].id; i==='all'?compare():week(i); window.scrollTo(0,0)}
+$('#tabs').innerHTML=W.map((w,i)=>`<button class="tab" data-i="${i}">Week ${esc(w.label)}</button>`).reverse().join('')+`<button class="tab" data-i="all">All weeks</button>`;
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>go(t.dataset.i==='all'?'all':+t.dataset.i));
+const hi=W.findIndex(w=>w.id===location.hash.slice(1));
+go(location.hash==='#all'?'all':(hi>=0?hi:W.length-1));
+</script>
+</body></html>
