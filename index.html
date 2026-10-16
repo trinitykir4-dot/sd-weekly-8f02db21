@@ -73,7 +73,8 @@ function week(i){
   ${w.sprintPlan.rows.map(r=>`<tr>${r.map(x=>`<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</table>
   <h2>Done and shipped</h2><div class="card"><ul>${w.done.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
   <h2>Takeaways</h2><div class="card"><ul>${w.takeaways.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
-  ${w.topics.length?`<h2>To discuss</h2><div class="card"><ul>${w.topics.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}`;
+  ${w.topics.length?`<h2>To discuss</h2><div class="card"><ul>${w.topics.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}
+  ${(w.agreed||[]).length?`<h2>Agreed at the call</h2><div class="card"><ul>${w.agreed.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}`;
   $('#view').innerHTML=h;
   const off=new Set();
   const draw=()=>{const list=w.cards.filter(c=>!off.has(c.cat)).sort((a,b)=>b.h-a.h).map(c=>[c.name,c.h,C[c.cat].color]);$('#cardbars').innerHTML=bars(list)};

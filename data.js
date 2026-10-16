@@ -121,6 +121,13 @@ window.WEEKS = [
       "Mariusz: T&G Branding as the source for each brand's DS library. RW sample sent, waiting for his feedback.",
       "Plugin owner: what Carl and Tristan decide, and when.",
       "Brief Hub: after T&G."
+    ],
+    agreed: [
+      "T&G structure stays first. Puzzle builds the old way meanwhile; Sprint 3 decided at the 23 Oct planning.",
+      "Noel reviews the DS file map and the plugin request flow, and fixes where template requests go (they still reach Luiza).",
+      "Kir tests Tristan's upload tool with the plugin's zips before it ships, so a plugin update does not break it.",
+      "ChatGPT stays on the standard plan; talk to Noel when it hits the limit. Cursor is an option the company already pays for.",
+      "Both agreed the current hours are not sustainable."
     ]
   }
 ];
