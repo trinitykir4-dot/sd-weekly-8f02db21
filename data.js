@@ -33,7 +33,7 @@ window.WEEKS = [
       { name: "Skills (HighRoyale starter pack)", cat: "wow", type: "Other", h: 1.0 },
       { name: "Puzzle with Luiza", cat: "plugins", type: "New product", h: 0.8 },
       { name: "Board upkeep + Digital Design Pulse", cat: "wow", type: "Other", h: 1.3 }
-    ], ["Mon 5", 8.1], ["Tue 6", 6.3], ["Wed 7", 11.8], ["Thu 8", 10.5], ["Fri 9 (to 11:10)", 1.9]],
+    ],
     sprintPlan: {
       capacity: 60, spent: 93,
       split: [["Planned", 33, "#5b8def"], ["Added mid-sprint", 46, "#e8a33d"], ["Urgent fix", 14, "#d9534f"]],
@@ -83,7 +83,7 @@ window.WEEKS = [
       { name: "Team meetings (1:1, Pulse, Product bi-weekly)", cat: "wow", type: "Other", h: 2.0 },
       { name: "Board upkeep, planning, 15Five", cat: "wow", type: "Other", h: 1.6 },
       { name: "Not on a card (workshop reviews, skills sync)", cat: "other", type: "Other", h: 1.5 }
-    ], ["Sat 10 - Mon 12", 16.2], ["Tue 13", 6.9], ["Wed 14", 7.7], ["Thu 15", 14.1], ["Fri 16 (to 11:30)", 4.7]],
+    ],
     sprintPlan: {
       capacity: 60, spent: null,
       split: [],
