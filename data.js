@@ -66,10 +66,10 @@ window.WEEKS = [
     id: "2026-10-16",
     label: "9-16 Oct",
     period: "9-16 Oct",
-    cutoff: "2026-10-16T09:30:00Z",
+    cutoff: "2026-10-16T09:57:00Z",
     sprint: "Sprint 2 · 12-23 Oct, week 1",
     meeting: "AI Systems overview (30 min)",
-    total: 55,
+    total: 56,
     slack: null,
     cards: [
       { name: "One structure for the T&G files of all 6 brands", cat: "tg", type: "Improvement", h: 32.9 },
@@ -81,9 +81,11 @@ window.WEEKS = [
       { name: "Trail Questline: handover to Ops", cat: "plugins", type: "New product", h: 0.9 },
       { name: "MOPO: onboarding counter question", cat: "plugins", type: "Other", h: 0.4 },
       { name: "Wheel: 2 files agreed with Natalie", cat: "plugins", type: "New product", h: 0.2 },
+      { name: "Path Gradient: first publish (cover, listing)", cat: "plugins", type: "Improvement", h: 0.2 },
+      { name: "HM Stamp Card master", cat: "plugins", type: "New product", h: 0.1 },
       { name: "Puzzle", cat: "plugins", type: "New product", h: 0 },
       { name: "Team meetings (1:1, Pulse, Product bi-weekly)", cat: "wow", type: "Other", h: 2.0 },
-      { name: "Board upkeep, planning, 15Five", cat: "wow", type: "Other", h: 1.6 },
+      { name: "Board upkeep, planning, 15Five, 1:1 prep", cat: "wow", type: "Other", h: 1.9 },
       { name: "Not on a card (workshop reviews, skills sync)", cat: "other", type: "Other", h: 1.5 }
     ],
     sprintPlan: {
@@ -109,10 +111,10 @@ window.WEEKS = [
       "Plugin ownership raised by Noel with Carl and Tristan. Request sources, time split and a 3-stage handover sent."
     ],
     takeaways: [
-      "55 h this week, 68% on Templates & Guidelines and design system.",
+      "56 h this week, 67% on Templates & Guidelines and design system.",
       "Naming convention grew into one structure for all 6 T&G files. Brief Hub and the plugin will read from it.",
       "Puzzle, planned for Sprint 2, has not started. 1 week left.",
-      "Plugins still took 12 h without new products: UR boards, Snake fixes, questions."
+      "Plugins still took 13 h without new products: UR boards, Snake fixes, questions."
     ],
     topics: [
       "Finish the T&G structure first, then Puzzle and Wheel. Move Puzzle to Sprint 3?",
