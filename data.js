@@ -10,7 +10,7 @@ window.CATEGORIES = {
   other:   { name: "Other",                  color: "#55555f" }
 };
 window.TYPES = {
-  Improvement: "#5b8def", Feature: "#3dbb7a", Bug: "#d9534f", "New product": "#e8a33d", Other: "#8a8a95"
+  Improvement: "#5b8def", Feature: "#3dbb7a", Bug: "#d9534f", "New product": "#e8a33d", "New project": "#b07cf0", Other: "#8a8a95"
 };
 window.WEEKS = [
   {
@@ -128,6 +128,67 @@ window.WEEKS = [
       "Kir tests Tristan's upload tool with the plugin's zips before it ships, so a plugin update does not break it.",
       "ChatGPT stays on the standard plan; talk to Noel when it hits the limit. Cursor is an option the company already pays for.",
       "Both agreed the current hours are not sustainable."
+    ]
+  },
+  {
+    id: "2026-10-23",
+    label: "16-23 Oct",
+    period: "16-23 Oct",
+    cutoff: "2026-10-23T10:30:00Z",
+    sprint: "Sprint 2 · 12-23 Oct, week 2",
+    meeting: "none on Friday, Sprint planning moved to Mon 26 Oct",
+    total: 75,
+    slack: null,
+    cards: [
+      { name: "B2Spin Design Wiki: 1 handbook for all designers", cat: "wow", type: "New project", h: 32.3 },
+      { name: "One structure for the T&G files of all 6 brands", cat: "tg", type: "New project", h: 19.6 },
+      { name: "Chain Offer 1+3 Free: new offer type, 5 brands", cat: "plugins", type: "New product", h: 7.4 },
+      { name: "Chain Offer Snake: Luiza's 23 comments, all brands", cat: "plugins", type: "Bug", h: 4.3 },
+      { name: "Questline UR boards: SB and HM masters", cat: "plugins", type: "Feature", h: 3.9 },
+      { name: "PF guidelines: TG pages, PF 3D header", cat: "tg", type: "Improvement", h: 1.0 },
+      { name: "MOPO: RW 2-offer version, OR between offers", cat: "plugins", type: "New product", h: 0.8 },
+      { name: "Path Gradient: first publish", cat: "plugins", type: "Improvement", h: 0.5 },
+      { name: "RW Style Guide for Mariusz", cat: "ds", type: "Improvement", h: 0.3 },
+      { name: "Plugin support questions", cat: "plugins", type: "Other", h: 0.2 },
+      { name: "Team meetings (overview, Pulse, Noel sync, Tech Talk)", cat: "wow", type: "Other", h: 2.3 },
+      { name: "Board upkeep, 15Five, 1:1 prep", cat: "wow", type: "Other", h: 0.4 },
+      { name: "Not on a card (plugin reward icons, tool setup)", cat: "other", type: "Other", h: 1.8 }
+    ],
+    sprintPlan: {
+      capacity: 60, spent: 118, col2: "Priority",
+      split: [["Planned", 68, "#5b8def"], ["Added mid-sprint", 44, "#e8a33d"], ["Urgent fix", 6, "#d9534f"]],
+      rows: [
+        ["T&G structure, all brands", "High", "51 h", "Working on"],
+        ["Design Wiki (added mid-sprint)", "Medium", "32 h", "Working on, ready for Noel's review"],
+        ["Questline UR boards (added mid-sprint)", "Medium", "12 h", "Working on"],
+        ["Chain Offer 1+3 Free", "Critical", "7 h", "Working on, with Natalie"],
+        ["Chain Offer Snake and bugs", "High", "6 h", "Working on"],
+        ["Design system: Mariusz + DS library", "High", "4 h", "Working on"],
+        ["PF guidelines", "High", "2 h", "Working on"],
+        ["DS reward icons, all brands", "High", "0", "After SB/ML/HM T&G"],
+        ["Puzzle", "High", "0", "Not started"],
+        ["Wheel", "Medium", "0", "Files agreed"],
+        ["Brief Hub: hand to Danila", "Medium", "0", "Not started"]
+      ]
+    },
+    done: [
+      "Chain Offer 1+3 Free: new offer type, masters for PF, ML, SB, HM and RW in 2 days for the November campaign. Sent to Natalie on 23 Oct.",
+      "Chain Offer Snake: Luiza's 23 comments fixed in all brands, RW handed to Michal. 1+3 and Snake follow the same design rules.",
+      "MOPO: RW 2-offer version works in the plugin, with OR between the offers.",
+      "T&G: colours, fonts and Usage Guides in all brands, PF texts, a lighter HM file, ML with Michal.",
+      "B2Spin Design Wiki: 1 place for design rules, brands and mechanics. Own initiative, ready for Noel's review.",
+      "Questline UR boards: SB v2 Main Questline masters for Saska, HM questline masters."
+    ],
+    takeaways: [
+      "At least 75 h this week, almost 2x the 40 h contract. 32 h of it is the Design Wiki, mostly at the weekend.",
+      "Sprint 2 closes at 118 h on sprint cards against 60 h capacity. 44 h went to cards added mid-sprint.",
+      "T&G structure took 51 h in the sprint and is still the main job.",
+      "Chain Offer 1+3 came in urgent and took 7 h in 2 days. Puzzle, Wheel and Brief Hub got 0 h again."
+    ],
+    topics: [
+      "Sprint 3: carry over T&G (ML, HM fonts), Chain Offer 1+3 and Snake final checks, Wiki review with Noel.",
+      "Puzzle and Wheel: 2nd sprint with almost 0 h. Keep them in Sprint 3 or move them out?",
+      "Hours: 75 h this week. What to drop so the sprint fits 60 h?"
     ]
   }
 ];

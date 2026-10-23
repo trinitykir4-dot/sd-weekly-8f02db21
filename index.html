@@ -69,7 +69,7 @@ function week(i){
   <h2>By request type</h2>${bars(Object.entries(typ).sort((a,b)=>b[1]-a[1]).map(([n,v])=>[n,v,T[n]||'#888']))}
   <h2>${esc(w.sprint)} · plan vs fact</h2>
   ${w.sprintPlan.split.length?stack(w.sprintPlan.split):''}
-  <table><tr><th>Card</th><th>${w.sprintPlan.split.length?'Estimate':'Priority'}</th><th>Spent</th><th>Status</th></tr>
+  <table><tr><th>Card</th><th>${w.sprintPlan.col2||(w.sprintPlan.split.length?'Estimate':'Priority')}</th><th>Spent</th><th>Status</th></tr>
   ${w.sprintPlan.rows.map(r=>`<tr>${r.map(x=>`<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</table>
   <h2>Done and shipped</h2><div class="card"><ul>${w.done.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
   <h2>Takeaways</h2><div class="card"><ul>${w.takeaways.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
