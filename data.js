@@ -217,14 +217,14 @@ window.WEEKS = [
       capacity: 60, spent: 0, col2: "Proposed",
       split: [],
       rows: [
-        ["T&G: close ML, HM fonts, reward icons to DS", "16 h", "0", "Proposal, waiting for Noel"],
-        ["Chain Offer 1+3 and Snake: final checks, Ops handover", "8 h", "0", "Proposal"],
-        ["Plugin: read the RW/HR Ultimate Prizes sheet", "4 h", "0", "Proposal"],
+        ["T&G: all assets in place in 5 brands, text styles everywhere", "24 h", "0", "Proposal, waiting for Noel"],
+        ["Naming at asset level: start once T&G is complete", "6 h", "0", "Proposal"],
+        ["Chain Offer 1+3 and Snake: finish, masters into every T&G, Ops handover", "8 h", "0", "Proposal"],
         ["Design Wiki: Noel's review, move to B2Spin GitHub", "6 h", "0", "Proposal"],
-        ["Puzzle, if kept", "10 h", "0", "Proposal"],
-        ["Plugin support", "6 h", "0", "Proposal"],
+        ["Plugin support for designers", "6 h", "0", "Proposal"],
         ["Brief Hub: hand to Danila", "2 h", "0", "Proposal"],
-        ["Meetings and board", "6 h", "0", "Proposal"]
+        ["Meetings and board", "6 h", "0", "Proposal"],
+        ["Puzzle and Wheel: out of Sprint 3, after T&G", "0", "0", "Proposal"]
       ]
     },
     done: [
