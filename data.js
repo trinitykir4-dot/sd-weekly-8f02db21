@@ -190,5 +190,58 @@ window.WEEKS = [
       "Puzzle and Wheel: 2nd sprint with almost 0 h. Keep them in Sprint 3 or move them out?",
       "Hours: 75 h this week. What to drop so the sprint fits 60 h?"
     ]
+  },
+  {
+    id: "2026-10-26",
+    label: "23-26 Oct (so far)",
+    period: "23-26 Oct",
+    cutoff: "2026-10-26T12:10:00Z",
+    sprint: "Sprint 3 · 26 Oct - 6 Nov, before planning",
+    meeting: "planning cancelled, async",
+    total: 31,
+    slack: null,
+    cards: [
+      { name: "B2Spin Design Wiki: business section, audit, sign-in, live edits", cat: "wow", type: "New project", h: 13.0 },
+      { name: "Reward icons: same component sets in all 5 brands, linked into the masters", cat: "ds", type: "Improvement", h: 7.2 },
+      { name: "Chain Offer 1+3 Free: Natalie's asks, Treasure Run header, into brand files", cat: "plugins", type: "New product", h: 4.7 },
+      { name: "Chain Offer Snake: rebuilds, masters into T&G, RW copy issue", cat: "plugins", type: "Bug", h: 2.1 },
+      { name: "T&G structure: HM Puzzle, Characters pages like RW", cat: "tg", type: "New project", h: 1.1 },
+      { name: "Questline UR boards: RW/HR sheet", cat: "plugins", type: "Feature", h: 0.6 },
+      { name: "MOPO: RW plates and header", cat: "plugins", type: "New product", h: 0.3 },
+      { name: "Brief Hub: repos move to B2Spin (IT)", cat: "bh", type: "Other", h: 0.2 },
+      { name: "Plugin support questions", cat: "plugins", type: "Other", h: 0.1 },
+      { name: "Team meetings (Product Functional Bi-Weekly)", cat: "wow", type: "Other", h: 1.3 },
+      { name: "Board upkeep, async update for Noel", cat: "wow", type: "Other", h: 0.5 }
+    ],
+    sprintPlan: {
+      capacity: 60, spent: 0, col2: "Proposed",
+      split: [],
+      rows: [
+        ["T&G: close ML, HM fonts, reward icons to DS", "16 h", "0", "Proposal, waiting for Noel"],
+        ["Chain Offer 1+3 and Snake: final checks, Ops handover", "8 h", "0", "Proposal"],
+        ["Plugin: read the RW/HR Ultimate Prizes sheet", "4 h", "0", "Proposal"],
+        ["Design Wiki: Noel's review, move to B2Spin GitHub", "6 h", "0", "Proposal"],
+        ["Puzzle, if kept", "10 h", "0", "Proposal"],
+        ["Plugin support", "6 h", "0", "Proposal"],
+        ["Brief Hub: hand to Danila", "2 h", "0", "Proposal"],
+        ["Meetings and board", "6 h", "0", "Proposal"]
+      ]
+    },
+    done: [
+      "Reward icons: the same component sets in every T&G of 5 brands, with RW as the model. Missing icons drawn, cards inside the masters are instances now, the exported JSON did not change.",
+      "Chain Offer 1+3: all of Natalie's asks done in 4 brands, Treasure Run header, RW keeps Level Up. Going into the brand T&G files with usage guides.",
+      "Design Wiki: business section, anatomy cards and motion on mechanic pages, full accuracy audit, sign-in with a Slack code, live edits.",
+      "RW MOPO: empty freespins and wheel plates fixed."
+    ],
+    takeaways: [
+      "At least 31 h from Friday 12:30 to Monday 13:10, most of it at the weekend.",
+      "Reward icons took 7 h: 5 brands now match RW.",
+      "Wiki kept growing on the weekend (13 h). It needs Noel's review before more work."
+    ],
+    topics: [
+      "Sprint 3 proposal: 58 of 60 h, async this time.",
+      "Edit rights in all T&G files and the flow for masters (sent to Noel on 26 Oct).",
+      "Puzzle and Wheel: keep them in Sprint 3 or move them out?"
+    ]
   }
 ];
