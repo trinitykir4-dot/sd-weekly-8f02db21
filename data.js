@@ -193,55 +193,62 @@ window.WEEKS = [
   },
   {
     id: "2026-10-26",
-    label: "23-26 Oct (so far)",
-    period: "23-26 Oct",
-    cutoff: "2026-10-26T12:10:00Z",
-    sprint: "Sprint 3 · 26 Oct - 6 Nov, before planning",
-    meeting: "planning cancelled, async",
-    total: 31,
+    label: "23-30 Oct",
+    period: "23-30 Oct",
+    cutoff: "2026-10-30T10:50:00Z",
+    sprint: "Sprint 3 · 26 Oct - 6 Nov, week 1 (plan still waiting for Noel)",
+    meeting: "planning cancelled 26 Oct (async), overview 30 Oct declined, Kir off on 30 Oct",
+    total: 82,
     slack: null,
     cards: [
-      { name: "B2Spin Design Wiki: business section, audit, sign-in, live edits", cat: "wow", type: "New project", h: 13.0 },
-      { name: "Reward icons: same component sets in all 5 brands, linked into the masters", cat: "ds", type: "Improvement", h: 7.2 },
-      { name: "Chain Offer 1+3 Free: Natalie's asks, Treasure Run header, into brand files", cat: "plugins", type: "New product", h: 4.7 },
-      { name: "Chain Offer Snake: rebuilds, masters into T&G, RW copy issue", cat: "plugins", type: "Bug", h: 2.1 },
-      { name: "T&G structure: HM Puzzle, Characters pages like RW", cat: "tg", type: "New project", h: 1.1 },
-      { name: "Questline UR boards: RW/HR sheet", cat: "plugins", type: "Feature", h: 0.6 },
+      { name: "Chain Offer 1+3 Free: zips for 5 brands to Ops, testing, critical fix on 30 Oct, RW gift boxes", cat: "plugins", type: "New product", h: 17.2 },
+      { name: "Chain Offer Snake and plugin bugs: zips to Ops, SBS previews, preview fixes", cat: "plugins", type: "Bug", h: 15.0 },
+      { name: "Reward icons: same sets in all 5 brands, in designers' files, HR stamp drafts", cat: "ds", type: "Improvement", h: 15.0 },
+      { name: "B2Spin Design Wiki: business section, audit, sign-in, live edits", cat: "wow", type: "New project", h: 13.4 },
+      { name: "T&G structure: PF characters, HR page clean-up, SB and RW fixes", cat: "tg", type: "New project", h: 10.9 },
+      { name: "Questline UR boards: UR pages and board icons as 1 set, HM, ML, SB, HR, RW", cat: "plugins", type: "Feature", h: 6.9 },
+      { name: "Stamp Card build fix for Sofia", cat: "plugins", type: "Bug", h: 0.9 },
+      { name: "Trail Questline: preview and data checks", cat: "plugins", type: "Feature", h: 0.6 },
       { name: "MOPO: RW plates and header", cat: "plugins", type: "New product", h: 0.3 },
       { name: "Brief Hub: repos move to B2Spin (IT)", cat: "bh", type: "Other", h: 0.2 },
       { name: "Plugin support questions", cat: "plugins", type: "Other", h: 0.1 },
       { name: "Team meetings (Product Functional Bi-Weekly)", cat: "wow", type: "Other", h: 1.3 },
-      { name: "Board upkeep, async update for Noel", cat: "wow", type: "Other", h: 0.5 }
+      { name: "Board upkeep, async update for Noel", cat: "wow", type: "Other", h: 0.7 }
     ],
     sprintPlan: {
-      capacity: 60, spent: 0, col2: "Proposed",
+      capacity: 60, spent: 82, col2: "Proposed",
       split: [],
       rows: [
-        ["T&G: all assets in place in 5 brands, text styles everywhere", "24 h", "0", "Proposal, waiting for Noel"],
-        ["Naming at asset level: start once T&G is complete", "6 h", "0", "Proposal"],
-        ["Chain Offer 1+3 and Snake: finish, masters into every T&G, Ops handover", "8 h", "0", "Proposal"],
-        ["Design Wiki: Noel's review, move to B2Spin GitHub", "6 h", "0", "Proposal"],
-        ["Plugin support for designers", "6 h", "0", "Proposal"],
-        ["Brief Hub: hand to Danila", "2 h", "0", "Proposal"],
-        ["Meetings and board", "6 h", "0", "Proposal"],
-        ["Puzzle and Wheel: out of Sprint 3, after T&G", "0", "0", "Proposal"]
+        ["T&G: all assets in place in 5 brands, text styles everywhere", "24 h", "11 h", "Working on"],
+        ["Naming at asset level: start once T&G is complete", "6 h", "0", "Not started"],
+        ["Chain Offer 1+3 and Snake: finish, masters into every T&G, Ops handover", "8 h", "32 h", "Ops testing"],
+        ["Design Wiki: Noel's review, move to B2Spin GitHub", "6 h", "13 h", "Waiting for Noel's review"],
+        ["Plugin support for designers", "6 h", "1 h", "Stamp Card fix for Sofia"],
+        ["Brief Hub: hand to Danila", "2 h", "0", "IT ask open"],
+        ["Meetings and board", "6 h", "2 h", ""],
+        ["Not in the proposal: reward icons", "0", "15 h", "Working on"],
+        ["Not in the proposal: Questline UR boards", "0", "7 h", "Working on"]
       ]
     },
     done: [
-      "Reward icons: the same component sets in every T&G of 5 brands, with RW as the model. Missing icons drawn, cards inside the masters are instances now, the exported JSON did not change.",
-      "Chain Offer 1+3: all of Natalie's asks done in 4 brands, Treasure Run header, RW keeps Level Up. Going into the brand T&G files with usage guides.",
-      "Design Wiki: business section, anatomy cards and motion on mechanic pages, full accuracy audit, sign-in with a Slack code, live edits.",
-      "RW MOPO: empty freespins and wheel plates fixed."
+      "Chain Offer 1+3 Free: zips for 5 brands sent to Ops on 27 Oct. Ops checked PF, SB and ML web on 29 Oct, \"1 Piece\" fits in every brand. On 30 Oct Kir found a critical error and sent new zips for all 5 brands, RW with Michal's gift boxes.",
+      "Chain Offer Snake: zips to Ops on 28 Oct, Kristina tests on 30 Oct. The image preload bug sits with dev, fix in the next release (about 2 Nov), not a go-live blocker.",
+      "Reward icons: the same component sets in 5 brands and in designers' files. Noel on 28 Oct: no postage stamps, align with DS (Justin, Mariusz).",
+      "Questline UR boards: UR page and board icons as 1 set in HM, ML, SB and HR, RW in progress. Natalie on 30 Oct: RW and HR use 1 generic wheel, PF, HM, ML and SB keep the metal wheels.",
+      "New channel #system-design-ops with Ops. Kir proposed 1 export scale per asset, worked back from the size on the site. Natalie agrees, Noel joins once the idea is agreed.",
+      "Stamp Card build fix for Sofia: with Stefan, he updates Retool."
     ],
     takeaways: [
-      "At least 31 h from Friday 12:30 to Monday 13:10, most of it at the weekend.",
-      "Reward icons took 7 h: 5 brands now match RW.",
-      "Wiki kept growing on the weekend (13 h). It needs Noel's review before more work."
+      "At least 82 h from Friday 23 Oct 12:30 to Friday 30 Oct 11:50, about 2x the 40 h contract. Kir worked part of his day off on 30 Oct.",
+      "Chain Offers took 32 h against 8 h in the Sprint 3 proposal: Ops testing brought fixes and a 2nd round of zips.",
+      "Reward icons (15 h) and UR boards (7 h) are not in the proposal at all.",
+      "No answer from Noel on Sprint 3 since 26 Oct, so most cards still carry the Sprint 2 label."
     ],
     topics: [
-      "Sprint 3 proposal: 58 of 60 h, async this time.",
-      "Edit rights in all T&G files and the flow for masters (sent to Noel on 26 Oct).",
-      "Puzzle and Wheel: keep them in Sprint 3 or move them out?"
+      "Sprint 3 plan from 26 Oct: OK or what to change? The labels wait for this.",
+      "Export scale for monetisation assets: 1 rule per asset (for example 2x), Noel's 2x agreement is the starting point.",
+      "Hours: 82 h this week. Which of reward icons, UR boards, Wiki can wait?",
+      "Monetisation Control: demo with Kristina on 2 Nov, then decide if it needs a card."
     ]
   }
 ];
