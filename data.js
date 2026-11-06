@@ -250,5 +250,67 @@ window.WEEKS = [
       "Hours: 82 h this week. Which of reward icons, UR boards, Wiki can wait?",
       "Monetisation Control: demo with Kristina on 2 Nov, then decide if it needs a card."
     ]
+  },
+  {
+    id: "2026-11-06",
+    label: "30 Oct - 6 Nov",
+    period: "30 Oct - 6 Nov",
+    cutoff: "2026-11-06T11:30:00Z",
+    sprint: "Sprint 3 · 26 Oct - 6 Nov, week 2 (last week of the sprint)",
+    meeting: "AI Sprint Planning, 6 Nov",
+    total: 55,
+    slack: null,
+    cards: [
+      { name: "T&G all brands: typography, PF characters, HM Icons and Extras, 1 export scale per asset with presets in every master", cat: "tg", type: "New project", h: 26.3 },
+      { name: "Puzzle: master, plugin tab, zips for 6 brands on v1.5.9, load in Monetisation Control with no errors", cat: "plugins", type: "New product", h: 8.4 },
+      { name: "Chain Offer bugs: ML captions, ML step files, Monetisation Control demo with Kristina", cat: "plugins", type: "Bug", h: 5.7 },
+      { name: "Plugin support: handover docs, manuals, table templates, plugin covers", cat: "plugins", type: "Other", h: 2.9 },
+      { name: "B2Spin Design Wiki: announcement, #systems-design channel", cat: "wow", type: "New project", h: 2.1 },
+      { name: "Theme Popup Builder panel redesign: clear issue cards, no scroll on small screens", cat: "plugins", type: "Improvement", h: 1.9 },
+      { name: "Chain Offer 1+3 Free: fixes after Ops testing", cat: "plugins", type: "New product", h: 1.4 },
+      { name: "RW Header Builder: Michal's plugin restyled, tested and published", cat: "plugins", type: "New product", h: 0.9 },
+      { name: "MOPO", cat: "plugins", type: "New product", h: 0.9 },
+      { name: "Questline UR boards", cat: "plugins", type: "Feature", h: 0.7 },
+      { name: "Reward icons: FREE ribbon versions (Natalie)", cat: "ds", type: "Improvement", h: 0.3 },
+      { name: "Design system: DS library, Noel and Matej", cat: "ds", type: "Other", h: 0.3 },
+      { name: "Brief Hub hand-over and Creative Studio", cat: "bh", type: "Other", h: 0.5 },
+      { name: "Team meetings (Pulse, All Hands)", cat: "wow", type: "Other", h: 1.5 },
+      { name: "Board upkeep", cat: "wow", type: "Other", h: 0.7 },
+      { name: "Video plugins session, no card", cat: "other", type: "Other", h: 1.0 }
+    ],
+    sprintPlan: {
+      capacity: 60, spent: 55, col2: "Proposed",
+      split: [],
+      rows: [
+        ["T&G: finish the 6 files, naming from T&G to Retool, Monetisation Control and Brief Hub", "20 h", "", "Working on"],
+        ["Puzzle: end-to-end run on dev, HR, hand to Ops", "8 h", "", "Working on"],
+        ["Chain Offer 1+3 and Snake: close after Ops testing", "4 h", "", "QAing"],
+        ["Reward icons: versions with and without FREE, into DS", "4 h", "", "Working on"],
+        ["Design Wiki: Noel's review, announcement at the Bi-Weekly on 20 Nov", "6 h", "", "Working on"],
+        ["Plugin support and panel redesign", "6 h", "", "Working on"],
+        ["Brief Hub: hand to Danila", "2 h", "", "Working on"],
+        ["Meetings and board", "6 h", "", ""]
+      ]
+    },
+    done: [
+      "Export scale: RW and HR masters export at 2x with 1 preset. PF, ML, HM and SB got a preset per master: pop-ups, newsletter banners and push 2x, CTA buttons in ML, HM, SB 1x. Every Usage Guide says the scale and file size.",
+      "Emails stay PNG: Gmail turns WebP into JPG and Outlook on Windows does not show WebP. The Puzzle steps image ships as WebP for the site and PNG for emails.",
+      "Puzzle: zips from plugin v1.5.9 load in Monetisation Control for ML, PF, HM, SB and RW, Visual QA 24/24. HR waits until it is on dev.",
+      "RW Header Builder: Michal's plugin restyled, tested and published.",
+      "Monetisation Control demo with Kristina on 3 Nov.",
+      "Player's Pick for Matt: fixed Positions JSON for 2 and 3 Rewards."
+    ],
+    takeaways: [
+      "At least 55 h from Friday 30 Oct 11:50 to Friday 6 Nov 12:30.",
+      "Half the week went into T&G, mostly the export scale across 6 brands.",
+      "Puzzle moved from 0 to almost ready in 1 week.",
+      "Most cards still carry the Sprint 2 label, Sprint 3 was never confirmed."
+    ],
+    topics: [
+      "Sprint 4 proposal: T&G and naming first, then Puzzle to Ops. OK?",
+      "Puzzle on the site: who presses Save and Build Puzzles in Monetisation Control - Kir on his dev account or Tristan?",
+      "Sprint labels: reset all open cards to Sprint 4 at once?",
+      "Design Wiki: Noel's review before the 20 Nov announcement."
+    ]
   }
 ];
