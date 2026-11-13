@@ -312,5 +312,64 @@ window.WEEKS = [
       "Sprint labels: reset all open cards to Sprint 4 at once?",
       "Design Wiki: Noel's review before the 20 Nov announcement."
     ]
+  },
+  {
+    id: "2026-11-13",
+    label: "6-13 Nov",
+    period: "6-13 Nov",
+    cutoff: "2026-11-13T11:30:00Z",
+    sprint: "Sprint 4 · 9-20 Nov, week 1",
+    meeting: "AI Systems overview, 13 Nov - cancelled, async update",
+    total: 48,
+    slack: null,
+    cards: [
+      { name: "T&G all brands: logo sets, HR typography, art to own components, DS buttons for HM and ML, mock-up sites", cat: "tg", type: "New project", h: 18.7 },
+      { name: "B2Spin Design Wiki: Noel's review, B2S look, move to B2Spin GitHub and Vercel, security review", cat: "wow", type: "New project", h: 6.9 },
+      { name: "Puzzle: dev check of 5 brands, ML end to end, v1.5.18 with the new Retool names", cat: "plugins", type: "New product", h: 6.2 },
+      { name: "Design system: asset texts on library styles in all T&G files", cat: "ds", type: "Other", h: 2.7 },
+      { name: "Chain Offer bugs: Snake step 5 box, live proof, Scan & Export error, SB finals for Saška", cat: "plugins", type: "Bug", h: 2.4 },
+      { name: "Reward icons: Loyalty Points icon in all 6 brands", cat: "ds", type: "Improvement", h: 2.0 },
+      { name: "Brief Hub: security review, move to company GitHub and Vercel, OneLogin ask", cat: "bh", type: "Other", h: 1.9 },
+      { name: "Plugin support: Plugin Hub and plugins in B2S look, help for Matt", cat: "plugins", type: "Other", h: 1.8 },
+      { name: "Theme Popup Builder panel redesign", cat: "plugins", type: "Improvement", h: 1.4 },
+      { name: "Stamp Card fix for Sofia, RW Header Builder v1.3.0", cat: "plugins", type: "Bug", h: 0.4 },
+      { name: "Team meetings (Product Bi-Weekly, 1:1 and planning on 6 Nov)", cat: "wow", type: "Other", h: 2.8 },
+      { name: "Board upkeep", cat: "wow", type: "Other", h: 0.3 }
+    ],
+    sprintPlan: {
+      capacity: 60, spent: 48, col2: "Proposed",
+      split: [],
+      rows: [
+        ["T&G: finish the 6 files, naming from T&G to Retool, Monetisation Control and Brief Hub", "20 h", "19 h in week 1", "Working on"],
+        ["Puzzle: end-to-end run on dev, HR, hand to Ops", "8 h", "6 h", "Working on"],
+        ["Design Wiki: Noel's review, announcement at the Bi-Weekly on 20 Nov", "6 h", "7 h", "Working on"],
+        ["Plugin support and panel redesign", "6 h", "3 h", "Working on"],
+        ["Chain Offer 1+3 and Snake: close after Ops testing", "4 h", "2 h", "Working on"],
+        ["Reward icons: versions with and without FREE, into DS", "4 h", "2 h", "Working on"],
+        ["Brief Hub: hand to Danila (this week: security and move to company Vercel)", "2 h", "2 h", "Working on"],
+        ["DS library: asset texts and buttons (not in the proposal)", "-", "3 h", "Working on"],
+        ["Meetings and board", "6 h", "3 h", ""]
+      ]
+    },
+    done: [
+      "Puzzle: dev check on 5 brands, ML end to end. Plugin v1.5.18 uses the new Retool names (Instructions Header Image URL, Puzzle Header Image URL), Kristina has it.",
+      "Loyalty Points icon: 1 coin in Reward Icons for all 6 brands, announced in #systems-design on 12 Nov. HR uses Noel's Spark.",
+      "Design Wiki and Brief Hub: moved to the B2Spin GitHub and the company Vercel, commits from the work email only, security review done.",
+      "T&G: logo sets for every brand, HR typography, brand art in own components, DS Button in HM and ML assets, asset texts on library styles.",
+      "Main Collectible Questline moved to the Archive in RW and HR: Natalie confirmed new brands launch with the Stamp Card only.",
+      "Chain Offer: final November files (1+3, 5 steps) sent to Saška for SB."
+    ],
+    takeaways: [
+      "At least 48 h from Friday 6 Nov 12:30 to Friday 13 Nov 12:30, Sprint 4 week 1.",
+      "T&G took 19 of the 20 h planned for the whole sprint in 1 week.",
+      "Wiki and Brief Hub moving to company GitHub and Vercel was not in the plan: about 3 h, done because IT asked for it.",
+      "Most open cards still carry the Sprint 2 label, Sprint 4 was never set on the board."
+    ],
+    topics: [
+      "Sprint labels: may Kir move all open cards to Sprint 4 himself?",
+      "T&G is over plan already. Keep it first in week 2, or move hours to Puzzle hand-over?",
+      "Reward icon size: Justin wants 1 size (DS 75x78), SB has 84x98 in prod, Daria asks Noel and Mariusz to decide.",
+      "Blocked on IT and infra: OneLogin apps for Wiki and Brief Hub, Vercel GitHub approval, Neon store."
+    ]
   }
 ];
