@@ -371,5 +371,60 @@ window.WEEKS = [
       "Reward icon size: Justin wants 1 size (DS 75x78), SB has 84x98 in prod, Daria asks Noel and Mariusz to decide.",
       "Blocked on IT and infra: OneLogin apps for Wiki and Brief Hub, Vercel GitHub approval, Neon store."
     ]
+  },
+  {
+    id: "2026-11-19",
+    label: "13-19 Nov",
+    period: "13-19 Nov",
+    cutoff: "2026-11-19T12:20:00Z",
+    sprint: "Sprint 4 · 9-20 Nov, week 2 (Kir off on 20 Nov)",
+    meeting: "AI Sprint Planning + 1:1, Thu 19 Nov (moved from Fri)",
+    total: 27,
+    slack: null,
+    cards: [
+      { name: "T&G all brands: Newsletter Banner, HR Home Page Icons, Promo Banner, Multi-Optional Offer and MOPO Side by Side in all brands, Flash Offer and Purchase Offer in 1 shape, old HM SB ML files archived", cat: "tg", type: "New project", h: 18.9 },
+      { name: "Design system: HR texts on library styles, pop-up buttons and timers with the DS inside (PF done)", cat: "ds", type: "Other", h: 2.6 },
+      { name: "B2Spin Design Wiki: OneLogin sign-in, bell, GitHub App from IT, talk moved to 4 Dec", cat: "wow", type: "New project", h: 2.0 },
+      { name: "Brief Hub: OneLogin only, bell, company Neon database from Oleksandr", cat: "bh", type: "Other", h: 1.8 },
+      { name: "Plugin support: WebP Exporter always 2x, shown to Daniel and Eduardo for Ops", cat: "plugins", type: "Improvement", h: 1.0 },
+      { name: "Team meetings (Digital Design Pulse 16 Nov)", cat: "wow", type: "Other", h: 0.5 },
+      { name: "Reward icons: Match 3 mini-game icon question from Sandro", cat: "ds", type: "Other", h: 0.2 },
+      { name: "Board upkeep, weekly recap in #systems-design", cat: "wow", type: "Other", h: 0.2 }
+    ],
+    sprintPlan: {
+      capacity: 60, spent: 0, col2: "Proposed for Sprint 5",
+      split: [],
+      rows: [
+        ["T&G all brands: Flash Offer and Purchase Offer in 1 shape, pop-up buttons with DS in HM, ML, SB", "20 h", "-", "Planned"],
+        ["Design Wiki: last fixes, team announcement at the Product Functional Meeting on 4 Dec", "8 h", "-", "Planned"],
+        ["DS library: HR and the rest of the pop-up parts", "6 h", "-", "Planned"],
+        ["Plugin support and the plugin hand-over (after Carl)", "6 h", "-", "Planned"],
+        ["Brief Hub: data into the company Neon, hand to Danila", "4 h", "-", "Planned"],
+        ["Puzzle: hand to Ops with Arthur's Retool steps", "4 h", "-", "Planned"],
+        ["Reward icons: 1 size for all brands", "2 h", "-", "Planned"],
+        ["Meetings and board", "6 h", "-", ""]
+      ]
+    },
+    done: [
+      "Design Wiki: sign-in through OneLogin only, the Slack code is off. Bell with notifications. Site edits write to the company GitHub through IT's GitHub App.",
+      "Brief Hub: OneLogin only, the same bell, connection to the company Neon database from infra.",
+      "T&G: Multi-Optional Offer and MOPO Side by Side pages the same in all brands; Promo Banner Preview and Page; Newsletter Banner fixed at 600x400 (with Michal); old HM, SB and ML files archived.",
+      "Flash Offer: proposal for 1 shape in all 6 brands in #brand-focused-designers; Purchase Offer follows the same structure.",
+      "Design system: every HR text linked to the library styles; pop-up buttons and timers use the DS inside (PF live).",
+      "Weekly recap in #systems-design: first one posted on 13 Nov, now runs every Friday."
+    ],
+    takeaways: [
+      "At least 27 h from Friday 13 Nov 12:30 to Thursday 19 Nov 13:20, 4.5 working days; manual Figma work is not tracked.",
+      "Since the last call on 6 Nov: at least 75 h in 2 weeks.",
+      "Sprint 4: T&G took most of the time again; Puzzle hand-over was not touched.",
+      "Wiki and Brief Hub now run only on company accounts: GitHub, Vercel, OneLogin, Neon."
+    ],
+    topics: [
+      "Ask AI cost: top up Kir's personal key and pay back, or a company Anthropic account?",
+      "Who signs off the design rules for all brands and the team rules? Who signs off compliance?",
+      "Illustration style A everywhere (wiki, Brief Hub, plugins)?",
+      "Wiki announcement: 4 Dec at the Product Functional Meeting, or first only to designers in #systems-design?",
+      "Sprint 5 proposal: OK? And may Kir move all open cards to Sprint 5 himself?"
+    ]
   }
 ];
