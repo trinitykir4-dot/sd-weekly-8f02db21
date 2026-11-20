@@ -374,22 +374,25 @@ window.WEEKS = [
   },
   {
     id: "2026-11-19",
-    label: "13-19 Nov",
-    period: "13-19 Nov",
-    cutoff: "2026-11-19T12:20:00Z",
+    label: "13-20 Nov",
+    period: "13-20 Nov",
+    cutoff: "2026-11-20T11:30:00Z",
     sprint: "Sprint 4 · 9-20 Nov, week 2 (Kir off on 20 Nov)",
     meeting: "AI Sprint Planning + 1:1, Thu 19 Nov (moved from Fri)",
-    total: 27,
+    total: 36,
     slack: null,
     cards: [
-      { name: "T&G all brands: Newsletter Banner, HR Home Page Icons, Promo Banner, Multi-Optional Offer and MOPO Side by Side in all brands, Flash Offer and Purchase Offer in 1 shape, old HM SB ML files archived", cat: "tg", type: "New project", h: 18.9 },
-      { name: "Design system: HR texts on library styles, pop-up buttons and timers with the DS inside (PF done)", cat: "ds", type: "Other", h: 2.6 },
-      { name: "B2Spin Design Wiki: OneLogin sign-in, bell, GitHub App from IT, talk moved to 4 Dec", cat: "wow", type: "New project", h: 2.0 },
-      { name: "Brief Hub: OneLogin only, bell, company Neon database from Oleksandr", cat: "bh", type: "Other", h: 1.8 },
+      { name: "T&G all brands: Newsletter Banner, HR Home Page Icons, Promo Banner, Multi-Optional Offer and MOPO Side by Side in all brands, Flash Offer and Purchase Offer in 1 shape, old HM SB ML files archived", cat: "tg", type: "New project", h: 19.2 },
+      { name: "Flash Offer 2 sizes: questions to Daniel (CRM export); announcements for naming, Page Status Icons and Working in This File prepared", cat: "tg", type: "New asset or product", h: 0.6 },
+      { name: "Design system: HR texts on library styles, pop-up buttons and timers with the DS inside (PF done)", cat: "ds", type: "Other", h: 2.7 },
+      { name: "B2Spin Design Wiki: OneLogin sign-in, bell, GitHub App from IT; opened as work in progress, Noel's 2nd review (10 points) in, Kim and Edgar asked, Ask AI cost to Slavi, SOPs started", cat: "wow", type: "New project", h: 3.6 },
+      { name: "Brief Hub: OneLogin only, bell, company Neon database from Oleksandr; renewal audit started (security, logic, UX)", cat: "bh", type: "Other", h: 2.4 },
+      { name: "Naming in Brief Hub: every T&G asset as a tile with picture and size for all 6 brands, brief templates, campaign blocks, HM Birthday send plan", cat: "bh", type: "Improvement", h: 2.6 },
+      { name: "Stickers illustrations with colour: new covers and icons for all 18 plugins, Brief Hub pictures", cat: "wow", type: "Improvement", h: 1.5 },
       { name: "Plugin support: WebP Exporter always 2x, shown to Daniel and Eduardo for Ops", cat: "plugins", type: "Improvement", h: 1.0 },
-      { name: "Team meetings (Digital Design Pulse 16 Nov)", cat: "wow", type: "Other", h: 0.5 },
+      { name: "Team meetings (Digital Design Pulse 16 Nov, AI Sprint Planning 19 Nov)", cat: "wow", type: "Other", h: 1.3 },
       { name: "Reward icons: Match 3 mini-game icon question from Sandro", cat: "ds", type: "Other", h: 0.2 },
-      { name: "Board upkeep, weekly recap in #systems-design", cat: "wow", type: "Other", h: 0.2 }
+      { name: "Board upkeep, weekly recap in #systems-design, 1:1 prep", cat: "wow", type: "Other", h: 0.5 }
     ],
     sprintPlan: {
       capacity: 60, spent: 0, col2: "Proposed for Sprint 5",
@@ -414,8 +417,9 @@ window.WEEKS = [
       "Weekly recap in #systems-design: first one posted on 13 Nov, now runs every Friday."
     ],
     takeaways: [
-      "At least 27 h from Friday 13 Nov 12:30 to Thursday 19 Nov 13:20, 4.5 working days; manual Figma work is not tracked.",
-      "Since the last call on 6 Nov: at least 75 h in 2 weeks.",
+      "At least 36 h from Friday 13 Nov 12:30 to Friday 20 Nov 12:30 (Kir off on 20 Nov, about 2 h that morning); manual Figma work is not tracked.",
+      "Since the call on 6 Nov: at least 84 h in 2 weeks.",
+      "Work on all 7 tasks from the 19 Nov call started the same day.",
       "Sprint 4: T&G took most of the time again; Puzzle hand-over was not touched.",
       "Wiki and Brief Hub now run only on company accounts: GitHub, Vercel, OneLogin, Neon."
     ],
@@ -425,6 +429,14 @@ window.WEEKS = [
       "Illustration style A everywhere (wiki, Brief Hub, plugins)?",
       "Wiki announcement: 4 Dec at the Product Functional Meeting, or first only to designers in #systems-design?",
       "Sprint 5 proposal: OK? And may Kir move all open cards to Sprint 5 himself?"
+    ],
+    agreed: [
+      "Illustrations: Stickers style with colour for the Wiki, Brief Hub and plugins.",
+      "Wiki: shared as work in progress, 1 week of feedback, then the official launch; legal review through Kim Alcantara in parallel.",
+      "Ask AI cost: 1 estimate for the Wiki and Brief Hub with Slavi, Noel approves with Carl.",
+      "T&G: align all assets in the core brands step by step. Flash Offer: 2 sizes for all brands, characters in PF, SB, HM and ML.",
+      "Naming: announce to designers, use it in Brief Hub, merge with the DS naming in January.",
+      "Working in This File and Page Status Icons: share with all brand designers. SOPs: go, email banner flow first."
     ]
   }
 ];
