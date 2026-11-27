@@ -46,6 +46,7 @@ details.st summary b{font-size:16px}details.st summary small{color:var(--dim);di
 details.st summary .hh{margin-left:auto;font-weight:700;white-space:nowrap}
 details.st summary .hh::after{content:" +";color:var(--dim)}details.st[open] summary .hh::after{content:" -"}
 details.st .bd{padding:0 18px 16px 84px;line-height:1.55}details.st .bd li{margin:6px 0}
+details.st .shot{display:block;margin:14px 0 4px}details.st .shot img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
 details.st .blk{border-left:3px solid #F5A3B3;padding:6px 12px;margin:4px 0 8px;color:var(--txt)}
 details.st a,.tldr a{color:var(--txt)}
 @media(max-width:560px){details.st .bd{padding-left:18px}}
@@ -129,7 +130,7 @@ function week(i){
    ${w.slack?`<div class="k"><b>${w.slack}</b><span>Slack messages sent</span></div>`:''}
   </div>
   ${w.tldr?`<h2>${ART('welcome')}In short</h2><div class="tldr"><ul>${w.tldr.map(x=>`<li>${md(x)}</li>`).join('')}</ul></div>`:''}
-  ${w.story?`<h2>By topic · click to open</h2><div class="sts">${w.story.map(t=>`<details class="st"><summary>${ART(t.img)}<div><b>${esc(t.title)}</b><small>${esc(t.state)}${t.blocker?' · blocker':''}</small></div><span class="hh">${t.h} h</span></summary><div class="bd">${t.blocker?`<div class="blk"><b>Blocker:</b> ${md(t.blocker)}</div>`:''}<ul>${t.points.map(x=>`<li>${md(x)}</li>`).join('')}</ul></div></details>`).join('')}</div>`:''}
+  ${w.story?`<h2>By topic · click to open</h2><div class="sts">${w.story.map(t=>`<details class="st"><summary>${ART(t.img)}<div><b>${esc(t.title)}</b><small>${esc(t.state)}${t.blocker?' · blocker':''}</small></div><span class="hh">${t.h} h</span></summary><div class="bd">${t.blocker?`<div class="blk"><b>Blocker:</b> ${md(t.blocker)}</div>`:''}<ul>${t.points.map(x=>`<li>${md(x)}</li>`).join('')}</ul>${t.shot?`<a class="shot" href="img/${t.shot}.webp" target="_blank" rel="noopener"><img src="img/${t.shot}.webp" alt="${esc(t.title)} screenshot" loading="lazy"></a>`:''}</div></details>`).join('')}</div>`:''}
   <h2>Where the week went · ${w.total} h</h2>${stack(catParts)}
   <div class="leg">${catParts.map(([n,h,col])=>`<span><i style="background:${col}"></i>${esc(n)} ${r1(h)} h${delta(h,pc[Object.keys(C).find(k=>C[k].name===n)]||0)}</span>`).join('')}</div>
   <h2>Hours by card</h2>

@@ -491,6 +491,7 @@ window.WEEKS = [
     story: [
       {
             "title": "Game thumbnails",
+        "shot": "shot-tiles",
             "h": 11,
             "state": "I think about 70% is done",
             "img": "thumbs",
@@ -530,6 +531,7 @@ window.WEEKS = [
       },
       {
             "title": "Design Assets Exporter",
+        "shot": "shot-dae",
             "h": 4,
             "state": "New plugin, my own initiative",
             "img": "welcome",
