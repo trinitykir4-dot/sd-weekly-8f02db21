@@ -35,6 +35,19 @@ h1{font-size:clamp(30px,5vw,52px);line-height:.98;font-weight:800;letter-spacing
 .meta{color:var(--dim);font-size:14px;margin-top:22px}
 h2{font-size:19px;font-weight:700;letter-spacing:-.01em;margin:44px 0 14px;display:flex;align-items:center;gap:14px}
 h2 img{width:76px;height:auto;flex:none}
+.tldr{background:var(--card);border:1px solid var(--line);border-radius:var(--r-card);padding:18px 22px;margin-top:16px}
+.tldr ul{margin:0;padding-left:18px}.tldr li{margin:6px 0;line-height:1.5}
+details.st{background:var(--card);border:1px solid var(--line);border-radius:var(--r-card);margin:10px 0;overflow:hidden}
+details.st summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:14px;padding:14px 18px}
+details.st summary::-webkit-details-marker{display:none}
+details.st summary img{width:52px;height:auto;flex:none}
+details.st summary b{font-size:16px}details.st summary small{color:var(--dim);display:block;font-size:13px;margin-top:2px}
+details.st summary .hh{margin-left:auto;font-weight:700;white-space:nowrap}
+details.st summary .hh::after{content:" +";color:var(--dim)}details.st[open] summary .hh::after{content:" -"}
+details.st .bd{padding:0 18px 16px 84px;line-height:1.55}details.st .bd li{margin:6px 0}
+details.st .blk{border-left:3px solid #F5A3B3;padding:6px 12px;margin:4px 0 8px;color:var(--txt)}
+details.st a,.tldr a{color:var(--txt)}
+@media(max-width:560px){details.st .bd{padding-left:18px}}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:16px}
 .k{background:var(--card);border:1px solid var(--line);border-radius:var(--r-card);padding:20px 22px}
 .k b .d{display:inline;margin:0 0 0 10px;font-size:14px;vertical-align:middle}
@@ -87,6 +100,7 @@ const HEX={'#5b8def':'#9DB0FF','#e8a33d':'#F6CD7F','#d9534f':'#F5A3B3','#3dbb7a'
 const tone=c=>HEX[String(c).toLowerCase()]||c;
 const $=s=>document.querySelector(s), esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const r1=n=>Math.round(n*10)/10;
+const md=t=>esc(t).replace(/\[([^\]]+)\]\((https:[^)\s]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
 const ART=n=>`<img src="img/${n}.webp" alt="">`;
 function byKey(w,key){const m={};w.cards.forEach(c=>m[c[key]]=(m[c[key]]||0)+c.h);return m}
 function bars(list,colorOf){const max=Math.max(...list.map(x=>x[1]),1);
@@ -113,6 +127,8 @@ function week(i){
    ${w.sprintPlan.spent?`<div class="k"><b>${w.sprintPlan.spent} h</b><span>on sprint cards · capacity ${w.sprintPlan.capacity} h</span></div>`:''}
    ${w.slack?`<div class="k"><b>${w.slack}</b><span>Slack messages sent</span></div>`:''}
   </div>
+  ${w.tldr?`<h2>${ART('welcome')}In short</h2><div class="tldr"><ul>${w.tldr.map(x=>`<li>${md(x)}</li>`).join('')}</ul></div>`:''}
+  ${w.story?`<h2>By topic · click to open</h2>${w.story.map(t=>`<details class="st"><summary>${ART(t.img)}<div><b>${esc(t.title)}</b><small>${esc(t.state)}${t.blocker?' · blocker':''}</small></div><span class="hh">${t.h} h</span></summary><div class="bd">${t.blocker?`<div class="blk"><b>Blocker:</b> ${md(t.blocker)}</div>`:''}<ul>${t.points.map(x=>`<li>${md(x)}</li>`).join('')}</ul></div></details>`).join('')}`:''}
   <h2>Where the week went · ${w.total} h</h2>${stack(catParts)}
   <div class="leg">${catParts.map(([n,h,col])=>`<span><i style="background:${col}"></i>${esc(n)} ${r1(h)} h${delta(h,pc[Object.keys(C).find(k=>C[k].name===n)]||0)}</span>`).join('')}</div>
   <h2>Hours by card</h2>

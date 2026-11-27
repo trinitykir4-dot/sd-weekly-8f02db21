@@ -480,6 +480,48 @@ window.WEEKS = [
         ["Meetings and board", "6 h", "3 h", ""]
       ]
     },
+    tldr: [
+      "Game thumbnails: about 70% done. Our own builder makes the 4 brand tiles and the X6 screenshot from a game code; 23 of 80 December games built. Blocker: provider art.",
+      "Brief Hub: stable, 5 real December briefs went through. Plan with Danila: finish it by the end of the year, then move to Skeleton.",
+      "Wiki: live as work in progress. Blocker: only 1 of 6 brand designers did the review (due 30 Nov). AI connector approved by security, setup with IT.",
+      "Design Assets Exporter: new plugin, 1 button gives Ops a zip of all campaign assets. Reads real PF, HM, ML, SB files.",
+      "Systems Design team in Figma and the Design Playbook: 19 flows in FigJam. T&G: WebP rule and home page icons in all 6 brands."
+    ],
+    story: [
+      { title: "Game thumbnails", h: 11, state: "About 70% done", img: "reference-scene", blocker: "Provider art: most providers keep it behind a login, or we do not know where it is yet.", points: [
+        "Edgar and I had a call and mapped how tiles and screenshots are made today. I started talking to Rollout, IT and the team behind the upload bot.",
+        "Our own builder works: you put in a game code and get the 4 brand tiles and the X6 screenshot, with an AI check before upload. 23 of the 80 December games are already built with no manual work.",
+        "The IT ticket for a shared 1Password account is open, and I am working on the providers with Rollout.",
+        "Waiting on Edgar for access to Lobby Magic, so we can compare it with our builder.",
+        "The flow as it works today: [Flow 19](https://www.figma.com/board/JcEF8Y1QGyvaIHWfVDINN1?node-id=109-30)."
+      ]},
+      { title: "Design Wiki", h: 10, state: "Live as work in progress", img: "no-briefs", blocker: "The designers' review is slow: only Michal (RW) did part 1 so far.", points: [
+        "A task in monday for the 6 brand designers, due 30 Nov: [Design Wiki review](https://b2spin.monday.com/boards/7685433525/pulses/13619205245). Part 1: check your own brand pages. Part 2: check the rest of the wiki for your brand.",
+        "Michal's comments are all in the wiki now. Luiza, Daria, Patricia and Yuliia helped with answers and edits. The other 5 brand designers have not started yet.",
+        "Ask: a push to the brand designers to do their part by 30 Nov, and Michal's help with part 2.",
+        "AI connector: Patricia asked if people could ask ChatGPT or Claude and get the answer from the wiki. I built it: read only, OneLogin sign-in, only our company workspaces can connect. Nicholas approved it from the security side on 27 Nov; setup with IT is in progress ([thread](https://b2spin.enterprise.slack.com/archives/C0B6RH8RRMX/p1795769678655889?thread_ts=1795629880.711409&cid=C0B6RH8RRMX))."
+      ]},
+      { title: "Brief Hub", h: 7, state: "Stable, handover started", img: "approved", blocker: "", points: [
+        "The audit fixes are in, and 5 real December briefs went through [Brief Hub](https://b2s-brief-hub.vercel.app).",
+        "Synced with Danila on 27 Nov, more calls to come. Plan: finish Brief Hub by the end of the year. Danila helps with the briefers, they test it on real briefs, I fix what they find.",
+        "The company wants everything in Skeleton. Moving Brief Hub, the wiki and the rest there is a big task of its own, best done after Brief Hub runs as its own project on Vercel."
+      ]},
+      { title: "T&G for all brands", h: 6, state: "In progress", img: "all-clear", blocker: "", points: [
+        "The WebP rule and the home page icons 75x78 are in all 6 brands. Email body rules and banner tags added.",
+        "Slower this sprint because game thumbnails came in: 6 of the 20 h planned."
+      ]},
+      { title: "Design Assets Exporter", h: 4, state: "Working, first real run next", img: "welcome", blocker: "", points: [
+        "The pain: Ops export and rename every asset from production files by hand, for Monetization campaigns and BAU tasks.",
+        "The idea: open the campaign file, press 1 button, get 1 zip with all assets in the right format (WebP on site, PNG for email and push), T&G names and a folder per mechanic.",
+        "Kristina and Natalie said yes on 24 Nov. It already reads the real campaign files of PF, HM, ML and SB. Next: a first real run with a designer, then the folder list to Kristina before publishing.",
+        "To decide with Ops: designers press the button, or Ops themselves."
+      ]},
+      { title: "Systems Design in Figma and the Playbook", h: 4, state: "Draft, needs review", img: "no-results", blocker: "", points: [
+        "A Systems Design team in Figma: my files were spread between Digital Design and drafts, now all in one place with B2S covers.",
+        "The [Design Playbook](https://www.figma.com/board/JcEF8Y1QGyvaIHWfVDINN1/B2S-Design-Playbook) in FigJam: 19 flows where Systems Design takes part, one page per flow: who does what, where and when.",
+        "Not every flow is checked yet. Next: the right people comment, we approve the flows and give each one an owner."
+      ]}
+    ],
     done: [
       "Game thumbnails: own tile builder. From a game code it takes the provider art and lays out the 4 brand tiles and the X6 screenshot; 10 December games built.",
       "Design Wiki: open as work in progress, 8 people gave feedback; AI tools can read it after OneLogin sign-in.",
