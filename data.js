@@ -438,5 +438,65 @@ window.WEEKS = [
       "Naming: announce to designers, use it in Brief Hub, merge with the DS naming in January.",
       "Working in This File and Page Status Icons: share with all brand designers. SOPs: go, email banner flow first."
     ]
+  },
+  {
+    id: "2026-11-27",
+    label: "20-27 Nov",
+    period: "20-27 Nov",
+    cutoff: "2026-11-27T10:30:00Z",
+    sprint: "Sprint 5 · 23 Nov - 4 Dec, week 1",
+    meeting: "AI Systems overview, Fri 27 Nov 12:00",
+    total: 52,
+    slack: null,
+    cards: [
+      { name: "Game thumbnails: call with Edgar, the flow, Tiles Playground, own tile builder (code -> assets -> 4 tiles), auto X6 screenshot, AI check with forbidden words, monthly export page for Z-Automation, December games built", cat: "other", type: "New project", h: 10.9 },
+      { name: "T&G naming and structure: WebP rule in all Usage Guides, home page icons 75x78 in all brands, email body rules, banner tags", cat: "tg", type: "New project", h: 6.4 },
+      { name: "Brief Hub: renewal audit fixes, 5 real December briefs end to end, sync with Danila", cat: "bh", type: "Other", h: 6.8 },
+      { name: "Design Wiki: ML, HM, SB links to the new T&G files, provider logins page, write a page, AI login for ChatGPT and Claude", cat: "wow", type: "New project", h: 5.4 },
+      { name: "Wiki launch as work in progress: feedback from Michal, Alison, Edgar, Yuliia, Luiza, Daria, Patricia, Pasquale; review task for 6 DDs", cat: "wow", type: "New project", h: 4.6 },
+      { name: "Design Assets Exporter: zip of Slim banners for Ops, asked by Kristina", cat: "plugins", type: "Feature", h: 4.3 },
+      { name: "Game provider logins: 1Password vault for designers, IT requests", cat: "wow", type: "Improvement", h: 3.1 },
+      { name: "Stickers style: covers of all Systems Design files, dark FigJam canvas", cat: "wow", type: "Improvement", h: 2.2 },
+      { name: "SOPs: Design Playbook flows in FigJam", cat: "wow", type: "Other", h: 2.0 },
+      { name: "Plugin support: one footer for all plugins, WebP answers", cat: "plugins", type: "Improvement", h: 1.5 },
+      { name: "Design system: DS library texts and General Elements", cat: "ds", type: "Other", h: 1.5 },
+      { name: "Team meetings (Digital Design Pulse 23 Nov, Tech Talk 25 Nov)", cat: "wow", type: "Other", h: 1.6 },
+      { name: "Puzzle: Retool checks", cat: "plugins", type: "Other", h: 0.9 },
+      { name: "Board upkeep, recap, Ask AI cost, naming announcement", cat: "wow", type: "Other", h: 0.9 }
+    ],
+    sprintPlan: {
+      capacity: 60, spent: 52, col2: "Proposed",
+      split: [],
+      rows: [
+        ["T&G all brands", "20 h", "6 h", "Working on"],
+        ["Design Wiki: fixes and launch", "8 h", "10 h", "Working on"],
+        ["DS library", "6 h", "2 h", "Working on"],
+        ["Plugin support and hand-over (Design Assets Exporter inside)", "6 h", "6 h", "Working on"],
+        ["Brief Hub: data to the company Neon, hand to Danila", "4 h", "7 h", "Working on"],
+        ["Puzzle: hand to Ops", "4 h", "1 h", "Working on"],
+        ["Reward icons: 1 size for all brands", "2 h", "0 h", "Working on"],
+        ["Game thumbnails with Edgar (not in the proposal)", "-", "11 h", "Working on"],
+        ["Provider logins, Stickers covers, SOPs (from the 19 Nov call)", "-", "7 h", "Working on"],
+        ["Meetings and board", "6 h", "3 h", ""]
+      ]
+    },
+    done: [
+      "Game thumbnails: own tile builder. From a game code it takes the provider art and lays out the 4 brand tiles and the X6 screenshot; 10 December games built.",
+      "Design Wiki: open as work in progress, 8 people gave feedback; AI tools can read it after OneLogin sign-in.",
+      "Brief Hub: audit fixes in, 5 real December briefs went through it.",
+      "T&G: WebP rule and home page icons 75x78 in all 6 brands.",
+      "Covers of all Systems Design files in the Stickers style, dark FigJam canvas."
+    ],
+    takeaways: [
+      "At least 52 h from Friday 20 Nov 12:30 to Friday 27 Nov 11:30; manual Figma work is not tracked.",
+      "Game thumbnails took the most time (11 h) and was not in the Sprint 5 proposal.",
+      "T&G got 6 of the 20 h planned for Sprint 5."
+    ],
+    topics: [
+      "Game thumbnails: show the system on 1 Dec; it moves hours away from T&G in week 2.",
+      "Who signs off the wiki rules (asked 24 Nov)?",
+      "Match 3 in T&G now, or Sandro keeps the art (asked 19 Nov)?",
+      "6-month goals proposal: OK (sent 24 Nov)?"
+    ]
   }
 ];
