@@ -497,9 +497,9 @@ window.WEEKS = [
             "img": "thumbs",
             "blocker": "",
             "points": [
-                  "Edgar and I had a call and mapped how tiles and screenshots are made today. I’ve started talking to Rollout, IT and the team behind the upload bot.",
-                  "Our own builder works: you put in a game code and get the 4 brand tiles and the X6 screenshot, with an AI check before upload. 23 of the 80 December games are already built with no manual work.",
-                  "Main blocker: getting the provider art. Most providers keep it behind a login, or we don’t know where it is yet. The IT ticket for a shared 1Password account is open, and I’m working on the providers with Rollout.",
+                  "Edgar and I had a call and mapped how tiles and screenshots are made today: [Flow 19](https://www.figma.com/board/JcEF8Y1QGyvaIHWfVDINN1?node-id=109-30). I’ve started talking to Rollout ([#bo-support](https://b2spin.enterprise.slack.com/archives/C0B5WQ0D97G/p1795772337900409)), IT ([1Password request](https://b2spin.enterprise.slack.com/archives/C0B6RH8RRMX/p1795706496167689)), the providers in their shared channels ([example](https://b2spin.enterprise.slack.com/archives/C0BQSUS6BR9/p1795772922203689)) and the team behind the upload bot.",
+                  "Our own builder works: you put in a game code and get the 4 brand tiles and the X6 screenshot, with an AI check before upload. 23 of the 80 December games are already built with no manual work: [Tiles Playground](https://www.figma.com/design/e0mmmBefPGRmAH0Lll8VgF/B2S---Tiles-Playground).",
+                  "Main blocker: getting the provider art. Most providers keep it behind a login, or we don’t know where it is yet. The IT ticket for a shared 1Password account is open ([thread](https://b2spin.enterprise.slack.com/archives/C0B6RH8RRMX/p1795706496167689)), and I’m working on the providers with Rollout.",
                   "Waiting on Edgar for access to Lobby Magic, so we can compare it with our builder."
             ]
       },
@@ -523,10 +523,10 @@ window.WEEKS = [
             "blocker": "",
             "points": [
                   "I made a task in monday for the 6 brand designers, due 30 Nov: [Design Wiki review](https://b2spin.monday.com/boards/7685433525/pulses/13619205245). Part 1: check your own brand pages. Part 2: check the rest of the wiki for your brand.",
-                  "So far only Michal has done part 1 (RW), and all his comments are in the wiki now. Luiza, Daria, Patricia and Yuliia helped with answers and edits.",
+                  "So far only Michal has done part 1 (RW), and all his comments are in the wiki now ([thread](https://b2spin.enterprise.slack.com/archives/C0CEMNSARNF/p1795104989815799)). Luiza, Daria, Patricia and Yuliia helped with answers and edits ([list of edits](https://b2s-design-wiki.vercel.app/edits)).",
                   "The other 5 brand designers haven't started yet. I think some product designers haven't looked yet either.",
                   "**Where I need you:** could you give them a push to do their part by 30 Nov? And could you ask Michal to help with part 2 as well? He is very precise, and editing the pages directly is the fastest way to fix them.",
-                  "**AI connector:** Patricia asked if we could connect the wiki to ChatGPT and Claude, so people ask their AI tool and get the answer from the wiki. I liked the idea and built it: read only, OneLogin sign-in, and only our company workspaces can connect. Nicholas approved it from the security side this morning, and now I'm sorting out the setup with IT ([thread](https://b2spin.enterprise.slack.com/archives/C0B6RH8RRMX/p1795769678655889?thread_ts=1795629880.711409&cid=C0B6RH8RRMX))."
+                  "**AI connector:** Patricia [asked](https://b2spin.enterprise.slack.com/archives/C0CAAC55Z6U/p1795624530166399?thread_ts=1795521967.944569&cid=C0CAAC55Z6U) if we could connect the wiki to ChatGPT and Claude, so people ask their AI tool and get the answer from the wiki. I liked the idea and built it: read only, OneLogin sign-in, and only our company workspaces can connect. Nicholas approved it from the security side this morning, and now I'm sorting out the setup with IT ([thread](https://b2spin.enterprise.slack.com/archives/C0B6RH8RRMX/p1795769678655889?thread_ts=1795629880.711409&cid=C0B6RH8RRMX))."
             ]
       },
       {
@@ -537,9 +537,9 @@ window.WEEKS = [
             "img": "welcome",
             "blocker": "",
             "points": [
-                  "**The pain:** Ops export and rename every asset from our production files by hand, for Monetization campaigns and BAU tasks. They also asked for the HP icon and the inbox icon to come out together with the Theme Popup Builder pop-ups.",
+                  "**The pain:** Ops export and rename every asset from our production files by hand, for Monetization campaigns and BAU tasks. They also asked for the HP icon and the inbox icon to come out together with the Theme Popup Builder pop-ups. My proposal: [One press, one zip](https://b2s-design-wiki.vercel.app/review/export-one-press/index.html).",
                   "**The idea:** you open the campaign file, press one button and get one zip with all the assets. They come in the right format (WebP on site, PNG for email and push), with T&G names and a folder per mechanic, so Ops don't have to fix them by hand. Monetization Control will read only part of the Monetization assets, so this covers the rest, BAU included.",
-                  "Kristina and Natalie said yes on 24 Nov. The plugin already reads the real campaign files of PF, HM, ML and SB. Next: a first real run with a designer, then I share the folder list with Kristina before we publish.",
+                  "Kristina and Natalie said yes on 23-24 Nov ([thread](https://b2spin.enterprise.slack.com/archives/C0CCZDD4C9Z/p1795435878616349)). The plugin already reads the real campaign files of PF, HM, ML and SB. Next: a first real run with a designer, then I share the folder list with Kristina before we publish.",
                   "Still to decide with Ops: do the designers press the button, or Ops themselves. No blockers."
             ]
       },
@@ -563,13 +563,13 @@ window.WEEKS = [
             "img": "all-clear",
             "blocker": "",
             "points": [
-                  "The WebP rule and the home page icons are in all 6 brands. Slower this sprint because thumbnails came in. No blockers."
+                  "The [WebP rule](https://b2spin.enterprise.slack.com/archives/C0CAAC55Z6U/p1795434083512339) and the [home page icons 75x78](https://b2s-design-wiki.vercel.app/design/assets/home-page-icon) are in all 6 brands. Slower this sprint because thumbnails came in. No blockers."
             ]
       }
     ],
     done: [
       "Game thumbnails: own tile builder. From a game code it takes the provider art and lays out the 4 brand tiles and the X6 screenshot; 10 December games built.",
-      "Design Wiki: open as work in progress, 8 people gave feedback; AI tools can read it after OneLogin sign-in.",
+      "Design Wiki: open as work in progress. Michal reviewed RW; Luiza, Daria, Patricia and Yuliia helped with answers and edits. The AI connector is approved by security.",
       "Brief Hub: audit fixes in, 5 real December briefs went through it.",
       "T&G: WebP rule and home page icons 75x78 in all 6 brands.",
       "Covers of all Systems Design files in the Stickers style, dark FigJam canvas."
@@ -580,10 +580,10 @@ window.WEEKS = [
       "T&G got 6 of the 20 h planned for Sprint 5."
     ],
     topics: [
-      "Game thumbnails: show the system on 1 Dec; it moves hours away from T&G in week 2.",
-      "Who signs off the wiki rules (asked 24 Nov)?",
-      "Match 3 in T&G now, or Sandro keeps the art (asked 19 Nov)?",
-      "6-month goals proposal: OK (sent 24 Nov)?"
+      "Game thumbnails: show the system on 1 Dec ([Flow 19](https://www.figma.com/board/JcEF8Y1QGyvaIHWfVDINN1?node-id=109-30)); it moves hours away from T&G in week 2.",
+      "Who signs off the wiki rules ([asked 24 Nov](https://b2spin.enterprise.slack.com/archives/D0B4LNSJQGG/p1795533072131279))?",
+      "Match 3 in T&G now, or Sandro keeps the art ([asked 19 Nov](https://b2spin.enterprise.slack.com/archives/D0B4LNSJQGG/p1795114743035779))?",
+      "6-month goals proposal: OK ([sent 24 Nov](https://b2spin.enterprise.slack.com/archives/D0B4LNSJQGG/p1795528229844579))?"
     ]
   }
 ];

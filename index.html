@@ -114,7 +114,7 @@ function delta(now,prev){if(prev==null||now==null)return'';const d=r1(now-prev);
 function status(s){const t=String(s),l=t.toLowerCase();
   const m=l.startsWith('done')||l.startsWith('shipped')?['✓','var(--green)']:l.startsWith('waiting')||l.startsWith('blocked')?['!','var(--yellow)']:l.startsWith('working')||l.startsWith('qa')||l.startsWith('in progress')?['●','var(--blue)']:l.startsWith('not started')||l.startsWith('descoped')?['–','var(--faint)']:null;
   return m?`<span class="st"><b style="color:${m[1]}">${m[0]}</b><span>${esc(t)}</span></span>`:esc(t)}
-const list=(xs)=>`<div class="panel"><ul>${xs.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`;
+const list=(xs)=>`<div class="panel"><ul>${xs.map(x=>`<li>${md(x)}</li>`).join('')}</ul></div>`;
 
 function week(i){
   const w=W[i],p=W[i-1],cat=byKey(w,'cat'),pc=p?byKey(p,'cat'):{};
