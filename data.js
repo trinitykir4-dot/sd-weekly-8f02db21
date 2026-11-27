@@ -488,7 +488,7 @@ window.WEEKS = [
       "Systems Design team in Figma and the Design Playbook: 19 flows in FigJam. T&G: WebP rule and home page icons in all 6 brands."
     ],
     story: [
-      { title: "Game thumbnails", h: 11, state: "About 70% done", img: "reference-scene", blocker: "Provider art: most providers keep it behind a login, or we do not know where it is yet.", points: [
+      { title: "Game thumbnails", h: 11, state: "About 70% done", img: "thumbs", blocker: "Provider art: most providers keep it behind a login, or we do not know where it is yet.", points: [
         "Edgar and I had a call and mapped how tiles and screenshots are made today. I started talking to Rollout, IT and the team behind the upload bot.",
         "Our own builder works: you put in a game code and get the 4 brand tiles and the X6 screenshot, with an AI check before upload. 23 of the 80 December games are already built with no manual work.",
         "The IT ticket for a shared 1Password account is open, and I am working on the providers with Rollout.",
